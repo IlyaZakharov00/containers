@@ -22,9 +22,8 @@ test("method 'add'", () => {
 
   newTeam.add(Ilya);
 
-  const expected = { Ilya };
-
-  expect(newTeam).hasOwnProperty(expected);
+  const expected = newTeam.members.has(Ilya)
+  expect(expected).toBe(true);
 });
 
 test("method 'addAll'", () => {
