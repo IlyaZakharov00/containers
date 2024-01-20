@@ -11,7 +11,7 @@ test("Settings", () => {
     difficulty: "easy",
   };
 
-  expect(received).hasOwnProperty(expected);
+  expect(received).toMatchObject(expected);
 });
 
 test("Settings user", () => {
@@ -22,9 +22,9 @@ test("Settings user", () => {
   const expected = {
     theme: "light",
     music: "rock",
-    difficulty: "easy",
+    difficulty: "nightmare",
   };
 
-  expect(received).hasOwnProperty(expected);
+  expect(received).toMatchObject(expected);
 });
 
